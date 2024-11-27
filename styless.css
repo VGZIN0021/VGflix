@@ -1,0 +1,235 @@
+body
+    {
+        background: rgb(20, 20, 20);
+        margin: 8px;/*margem Externa*/
+        padding: 5px;/*margem interna*/
+    }
+
+.pesquisa-container
+    {
+        position: absolute; /* Posicionamento absoluto */
+        top: 8.3%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centralizar horizontal e verticalmente */
+        display: flex;/* Usando flexbox para alinhar a pesquisa */
+        justify-content: center;/* Centraliza horizontalmente */
+        z-index: 10; /* Garante que fique na frente */
+}
+        
+
+.pesquisa-container input[type="text"] 
+    {
+        width: 400px; /* Largura da pesquisa */
+        height: 30px; /* Altura da pesquisa */
+        border: 2px solid rgb(150, 36, 196); /* Borda simples roxa */
+        border-radius: 8px; /* Arredondar as bordas */
+        box-shadow: 0 4px 10px rgb(129, 108, 108); /* Sombra */
+    }
+
+.pesquisa-container input[type="submit"]
+{
+    padding: 10px 15px; /* Espaço interno */
+    border: none; /* Sem borda */
+    border-radius: 20px;
+    background-color: rgb(150, 36, 196); /* Cor de fundo roxa */
+    color: white; /* Cor do texto branco */
+    cursor: pointer; /* Mudar o cursor ao passar o mouse */
+}
+
+.pesquisa-container input[type="submit"]:hover
+    {
+        background-color: rgb(255, 0, 0); /* Cor de fundo vermelha ao passar o mouse */
+    }
+
+    .slogam {
+        position: absolute;
+        display: flex; /* Usando flexbox para alinhar os vídeos */
+        justify-content: flex-start; /* Alinha os vídeos à esquerda */
+        flex-wrap: wrap; /* Permite que os vídeos se movam para a linha de baixo em telas menores */
+        top: 19.4%;
+        left: 45%;
+    }
+.slogam iframe
+    {
+        width: 720px; /*largura do video */
+        height: 380px;/*altura do video*/
+        border: 2px solid rgb(150, 36, 196);/*borda simples roxa*/
+        border-radius: 8px; /* arrendondar as bordas*/
+        box-shadow: 0 4px 10px rgb(129, 108, 108);
+    }
+    /* Quando passar o mouse em um vídeo */
+    .slogam iframe:hover
+    {
+        opacity: 1; /* Apenas o vídeo em destaque fica totalmente visível */
+        z-index: 1;/* Fica na frente */
+    }
+    .slogam iframe:not(:hover)
+    {
+        opacity: 0.7; /* Os outros vídeos ficam um pouco transparentes */
+        z-index: 0; /* Ficam por baixo */
+    }
+    .texto-principal {
+        font-family: "Teko", sans-serif;
+        display: flex; /* Mantenha como block */
+        text-align: left; /* Alinha o texto à esquerda */
+        font-weight: 700;
+        font-size: 32px;
+        color: rgba(245, 245, 245, 0.918);
+        margin: 3%; /* Remove a margem lateral */
+        padding: 2%; /* Margem interna */
+        width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
+        max-width: none; /* Remove qualquer limite de largura */
+    }
+.texto-principal :hover
+    {
+        transform: scale(105%);
+    }
+.texto-principal p
+    {
+        position: relative;
+        text-align: center;
+        left: 6%;
+    }
+.texto-principal a 
+    { 
+        /* adicionar a TAG alo apos a DIV ira alterar essa tag (EX: .video-container iframe)*/
+        color: rgb(32, 177, 32); /*cor do texto*/
+        text-decoration: none; /* remove sublinhado do texto*/
+        text-align: center;
+        font-size: 20px;
+    
+    }
+
+.texto-principal a:hover
+    {   /* Hover quando o mouse está por cima*/
+        color: blue;
+        text-decoration: underline; /* Adiciona um sublinhado ao link quando o mouse passa sobre ele*/
+    
+    }
+
+.texto-principal p
+{
+    display: grid;
+}
+
+.vgflix-container p
+    {
+        text-indent: 15px; /* Move o textopara a direita, (-1px) para a esquerda */
+        font-size: 32px;
+        font-family: cursive;
+        color: crimson;
+         border: 3px solid;
+        border-radius: 14px;
+        box-shadow: 0 2px 10px rgb(223, 96, 96);
+        position: relative;
+        padding: 10px;
+        
+    }
+
+.inicio /*section inicio*/
+    {
+        display: flex;
+        background: rgba(26, 11, 8, 0.698);
+        justify-content: center;
+        padding-bottom: 70px;
+        padding-top: 70px;
+        margin-left: -12px;
+        margin-right: -12px;
+        border: 2px solid #410d04c7;
+    }
+    
+    .home
+    {
+        background: rgba(26, 11, 8, 0.698);
+        justify-content: center;
+        padding-bottom: 70px;
+        padding-top: 70px;
+        margin-left: 60px;
+        margin-right: 60px;
+        border: 2px solid #ad250db2;
+        border-radius: 7px;
+    }
+     
+    .breakman h2
+    {
+        position: absolute;
+        text-align: center;
+        color: #e0e0e0;
+        margin: 10px;
+        font-family: "Teko", sans-serif;
+        font-size: 32px;
+        top: 66.9%;
+    }
+
+    .breakman img
+    {
+        height: 200px;
+        justify-content: center;
+        margin: 10px;
+        border: 2px solid #ec2400b2;
+        border-radius: 7px;
+        box-shadow: 0 4px 10px rgb(129, 108, 108);   
+        opacity: 0.5;
+    }
+
+    .breakman img:hover
+    {
+        opacity: 1;
+        border-radius: 3px;
+        border-bottom: 3px solid rgb(238, 135, 1);
+        transform: scale(102%);
+    }
+
+    .breakman
+    {
+        display: flex;
+        overflow-x: auto; /* Adiciona rolagem horizontal */
+        gap: 10px; /* Espaçamento entre os itens */
+        padding: 10px;
+    }
+    
+    
+    /* Estilos específicos para dispositivos móveis */
+@media (max-width: 767px) {
+    .pesquisa-container {
+        top: 5%;
+    }
+
+    .pesquisa-container input[type="text"] {
+        width: 175px;
+        height: 20px;
+    }
+
+    .slogam iframe {
+        width: 100%;
+        height: 200px;
+    }
+
+    .texto-principal {
+        font-size: 20px;
+        margin: 2%;
+        position: absolute;
+        top: 70px;
+        left: -1.9;
+        width: 100%;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        border-radius: none;
+        box-shadow: none;
+        background: none;
+    }
+
+    .vgflix-container p {
+        font-size: 24px;
+    }
+
+    .pesquisa-container input[type=submit]
+    {
+        position: fixed;
+        top: -5px;
+        right: -70px;
+    }
+
+}
